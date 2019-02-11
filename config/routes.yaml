@@ -17,10 +17,6 @@ form_experience:
     path: /experience/create
     controller: App\Controller\LuckyController::experience
     
-form_loisirs:
-    path: /loisirs/create
-    controller: App\Controller\LuckyController::loisirs
-    
-form_loisirs:
+form_loisir:
     path: /loisir/create
     controller: App\Controller\LoisirController::create
