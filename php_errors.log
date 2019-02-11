@@ -1,0 +1,4 @@
+[04-Feb-2019 13:27:48 UTC] PHP Fatal error:  Class 'Symfony\Component\Validator\Constraint' not found in /home/ubuntu/workspace/my_cv/vendor/symfony/doctrine-bridge/Validator/Constraints/UniqueEntity.php on line 24
+[04-Feb-2019 13:28:14 UTC] PHP Fatal error:  Class 'Symfony\Component\Validator\Constraint' not found in /home/ubuntu/workspace/my_cv/vendor/symfony/doctrine-bridge/Validator/Constraints/UniqueEntity.php on line 24
+[04-Feb-2019 13:29:54 UTC] PHP Fatal error:  Class 'Symfony\Component\Validator\Constraint' not found in /home/ubuntu/workspace/my_cv/vendor/symfony/doctrine-bridge/Validator/Constraints/UniqueEntity.php on line 24
+[04-Feb-2019 13:34:27 UTC] PHP Fatal error:  Class 'Symfony\Component\Validator\Constraint' not found in /home/ubuntu/workspace/my_cv/vendor/symfony/doctrine-bridge/Validator/Constraints/UniqueEntity.php on line 24
