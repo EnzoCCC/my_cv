@@ -12,16 +12,22 @@ use App\Entity\Experience;
 
 use App\Entity\Loisirs;
 
+use App\Entity\Competence;
+
 class LuckyController extends AbstractController
 {
     public function number()
     {
         $number = random_int(0, 100);
-        $forms = $this->getDoctrine()->getRepository(Formation::class)->findAll();
+        $formations = $this->getDoctrine()->getRepository(Formation::class)->findAll();
+        $experiences = $this->getDoctrine()->getRepository(Experience::class)->findAll();
+        $competences = $this->getDoctrine()->getRepository(Competence::class)->findAll();
         
         return $this->render('Lucky/number.html.twig', array(
             'number' => $number,
-            'formations' => $forms
+            'formations' => $formations,
+            'experiences' => $experiences,
+            'competences' => $competences
         ));
     }
     
@@ -32,6 +38,7 @@ class LuckyController extends AbstractController
         $eManager = $this->getDoctrine()->getManager();
         $eManager->persist($form);
         $eManager->flush();
+        
         return $this->redirectToRoute('app_lucky_number');
     }
     
@@ -42,6 +49,18 @@ class LuckyController extends AbstractController
         $eManager = $this->getDoctrine()->getManager();
         $eManager->persist($form);
         $eManager->flush();
+        
+        return $this->redirectToRoute('app_lucky_number');
+    }
+    
+    public function competence()
+    {
+        $form = new Competence();
+        $form->setName('Mes compétences');
+        $eManager = $this->getDoctrine()->getManager();
+        $eManager->persist($form);
+        $eManager->flush();
+        
         return $this->redirectToRoute('app_lucky_number');
     }
     
@@ -52,6 +71,7 @@ class LuckyController extends AbstractController
         $eManager = $this->getDoctrine()->getManager();
         $eManager->persist($form);
         $eManager->flush();
+        
         return $this->redirectToRoute('app_lucky_number');
     }
 }

@@ -5,9 +5,9 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\ExperienceRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\CompetenceRepository")
  */
-class Experience
+class Competence
 {
     /**
      * @ORM\Id()
@@ -20,16 +20,6 @@ class Experience
      * @ORM\Column(type="string", length=255)
      */
     private $name;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $entreprise;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $lieu;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -49,30 +39,6 @@ class Experience
     public function setName(string $name): self
     {
         $this->name = $name;
-
-        return $this;
-    }
-
-    public function getEntreprise(): ?string
-    {
-        return $this->entreprise;
-    }
-
-    public function setEntreprise(string $entreprise): self
-    {
-        $this->entreprise = $entreprise;
-
-        return $this;
-    }
-
-    public function getLieu(): ?string
-    {
-        return $this->lieu;
-    }
-
-    public function setLieu(string $lieu): self
-    {
-        $this->lieu = $lieu;
 
         return $this;
     }

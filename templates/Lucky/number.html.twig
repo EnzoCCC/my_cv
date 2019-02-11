@@ -57,13 +57,13 @@
 			</div>
 			
 			<div class="sectionContent">
-			    {% for i in 0..2 %}
 				<article>
-					<h2>Job Title at Company</h2>
-					<p class="subDetails">April 2011 - Present</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim. Vestibulum bibendum mattis dignissim. Proin id sapien quis libero interdum porttitor.</p>
+					{% for experience in experiences %}
+					<h2>{{ experience.getName() }}</h2>
+					<p class="subDetails">{{ experience.getentreprise() }} à {{ experience.getlieu() }}</p>
+					<p>{{ experience.getdescription() }}</p>
+					{% endfor %}
 				</article>
-				{% endfor %}
 			
 			</div>
 			<div class="clear"></div>
@@ -77,14 +77,12 @@
 			
 			<div class="sectionContent">
 				<ul class="keySkills">
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
-					<li>A Key Skill</li>
+					<li>
+					{% for competence in competences %}
+					<h2>{{ competence.getname() }}</h2>
+					<p class="subDetails">{{ competence.getdescription() }}</p>
+					{% endfor %}
+					</li>
 				</ul>
 			</div>
 			<div class="clear"></div>
@@ -97,18 +95,15 @@
 			</div>
 			
 			<div class="sectionContent">
-			    {% for i in 0..0 %}
 				<article>
 					{% for formation in formations %}
 					<li>
 						<h2>{{ formation.getName() }}</h2>
-						
+						<p class="subDetails">Du {{ formation.getdatedebut()|date("m/d/Y") }} au {{ formation.getdatefin()|date("m/d/Y") }}</p>
 						<p>{{ formation.getParagraphe() }}</p>
 					</li>
 					{% endfor%}
 				</article>
-				{% endfor %}
-				
 			</div>
 			<div class="clear"></div>
 		</section>
