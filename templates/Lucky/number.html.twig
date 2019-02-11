@@ -64,7 +64,7 @@
 					<p>{{ experience.getdescription() }}</p>
 					{% endfor %}
 				</article>
-			
+			<a href="{{ path('experience_new') }}">Ajouter une expérience</a>
 			</div>
 			<div class="clear"></div>
 		</section>
@@ -84,6 +84,7 @@
 					{% endfor %}
 					</li>
 				</ul>
+				
 			</div>
 			<div class="clear"></div>
 		</section>
@@ -101,9 +102,12 @@
 						<h2>{{ formation.getName() }}</h2>
 						<p class="subDetails">Du {{ formation.getdatedebut()|date("m/d/Y") }} au {{ formation.getdatefin()|date("m/d/Y") }}</p>
 						<p>{{ formation.getParagraphe() }}</p>
+						<a href="{{ path('formation_edit', {'id': formation.getId()}) }}">Modifier une formation</a>
 					</li>
 					{% endfor%}
 				</article>
+				<a href="{{ path('formation_new') }}">Ajouter une formation</a>
+				
 			</div>
 			<div class="clear"></div>
 		</section>
