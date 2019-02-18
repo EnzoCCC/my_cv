@@ -18,19 +18,19 @@
 <div id="cv" class="instaFade">
 	<div class="mainDetails">
 		<div id="headshot" class="quickFade">
-			<img src="{{ asset('images/headshot.jpg') }}" alt="Alan Smith" />
+			<img src="{{ asset('images/Nasco.jpg') }}" alt="Alan Smith" />
 		</div>
 		
 		<div id="name">
-			<h1 class="quickFade delayTwo">Joe Bloggs</h1>
-			<h2 class="quickFade delayThree">Job Title {{number}}</h2>
+			<h1 class="quickFade delayTwo">Enzo Carfagna</h1>
+			<h2 class="quickFade delayThree">Et le chiffre gagnant est {{number}}</h2>
 		</div>
 		
 		<div id="contactDetails" class="quickFade delayFour">
 			<ul>
 				<li>e: <a href="mailto:joe@bloggs.com" target="_blank">joe@bloggs.com</a></li>
 				<li>w: <a href="http://www.bloggs.com">www.bloggs.com</a></li>
-				<li>m: 01234567890</li>
+				<li>m: 0123456789</li>
 			</ul>
 		</div>
 		<div class="clear"></div>
@@ -40,7 +40,7 @@
 		<section>
 			<article>
 				<div class="sectionTitle">
-					<h1>Personal Profile</h1>
+					<h1>Profil</h1>
 				</div>
 				
 				<div class="sectionContent">
@@ -53,7 +53,7 @@
 		
 		<section>
 			<div class="sectionTitle">
-				<h1>Work Experience</h1>
+				<h1>Experiences professionnelles</h1>
 			</div>
 			
 			<div class="sectionContent">
@@ -62,9 +62,17 @@
 					<h2>{{ experience.getName() }}</h2>
 					<p class="subDetails">{{ experience.getentreprise() }} à {{ experience.getlieu() }}</p>
 					<p>{{ experience.getdescription() }}</p>
+					<div>
+						<a href="{{ path('experience_edit', {'id': experience.getId()}) }}">Modifier</a>
+					</div>
+					<di>
+						<a href="{{ path('experience_delete', {'id': experience.getId()}) }}">Delete</a>
+					</di>
 					{% endfor %}
 				</article>
-			<a href="{{ path('experience_new') }}">Ajouter une expérience</a>
+				<button>
+					<a href="{{ path('experience_new') }}">Ajouter une expérience</a>
+				</button>
 			</div>
 			<div class="clear"></div>
 		</section>
@@ -72,7 +80,7 @@
 		
 		<section>
 			<div class="sectionTitle">
-				<h1>Key Skills</h1>
+				<h1>Compétences</h1>
 			</div>
 			
 			<div class="sectionContent">
@@ -81,9 +89,18 @@
 					{% for competence in competences %}
 					<h2>{{ competence.getname() }}</h2>
 					<p class="subDetails">{{ competence.getdescription() }}</p>
+					<div>
+						<a href="{{ path('competence_edit', {'id': competence.getId()}) }}">Modifier</a>
+					</div>
+					<div>
+						<a href="{{ path('competence_delete', {'id': competence.getId()}) }}">Delete</a>
+					</div>
 					{% endfor %}
 					</li>
 				</ul>
+				<button>
+					<a href="{{ path('competence_new') }}">Ajouter une compétence</a>
+				</button>
 				
 			</div>
 			<div class="clear"></div>
@@ -92,21 +109,26 @@
 		
 		<section>
 			<div class="sectionTitle">
-				<h1>Education</h1>
+				<h1>Formations</h1>
 			</div>
 			
 			<div class="sectionContent">
 				<article>
 					{% for formation in formations %}
-					<li>
 						<h2>{{ formation.getName() }}</h2>
 						<p class="subDetails">Du {{ formation.getdatedebut()|date("m/d/Y") }} au {{ formation.getdatefin()|date("m/d/Y") }}</p>
 						<p>{{ formation.getParagraphe() }}</p>
-						<a href="{{ path('formation_edit', {'id': formation.getId()}) }}">Modifier une formation</a>
-					</li>
+						<div>
+							<a href="{{ path('formation_edit', {'id': formation.getId()}) }}">Modifier</a>
+						</div>
+						<div>
+							<a href="{{ path('formation_delete', {'id': formation.getId()}) }}">Delete</a>
+						</div>
 					{% endfor%}
 				</article>
-				<a href="{{ path('formation_new') }}">Ajouter une formation</a>
+				<button>
+					<a href="{{ path('formation_new') }}">Ajouter une formation</a>
+				</button>
 				
 			</div>
 			<div class="clear"></div>
