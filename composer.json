@@ -61,5 +61,9 @@
             "allow-contrib": false,
             "require": "3.4.*"
         }
+    },
+    "require-dev": {
+        "codeception/codeception": "^2.5",
+        "escapestudios/symfony2-coding-standard": "3.x-dev"
     }
 }

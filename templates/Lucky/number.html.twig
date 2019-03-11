@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Joe Bloggs - Curriculum Vitae</title>
+<title>Enzo Carfagna - Curriculum Vitae</title>
 
 <meta name="viewport" content="width=device-width"/>
 <meta name="description" content="The Curriculum Vitae of Joe Bloggs."/>
 <meta charset="UTF-8"> 
 
-<link type="text/css" rel="stylesheet" href="{{ asset('style.css') }}"> 
+<link type="text/css" rel="stylesheet" href="{{ asset('style.css') }}">
+<link type="text/css" rel="stylesheet" href="{{ asset('styleformulaire.css') }}">
 <link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700|Lato:400,300' rel='stylesheet' type='text/css'>
 
 <!--[if lt IE 9]>
@@ -18,19 +19,19 @@
 <div id="cv" class="instaFade">
 	<div class="mainDetails">
 		<div id="headshot" class="quickFade">
-			<img src="{{ asset('images/Nasco.jpg') }}" alt="Alan Smith" />
+			<img src="{{ asset('images/Nasco2.jpg') }}" alt="Nasco" />
 		</div>
 		
 		<div id="name">
 			<h1 class="quickFade delayTwo">Enzo Carfagna</h1>
-			<h2 class="quickFade delayThree">Et le chiffre gagnant est {{number}}</h2>
+			<!--<h2 class="quickFade delayThree">Et le chiffre gagnant est {{number}}</h2>-->
 		</div>
 		
 		<div id="contactDetails" class="quickFade delayFour">
 			<ul>
-				<li>e: <a href="mailto:joe@bloggs.com" target="_blank">joe@bloggs.com</a></li>
-				<li>w: <a href="http://www.bloggs.com">www.bloggs.com</a></li>
-				<li>m: 0123456789</li>
+				<li>mail: <a href="mailto:enzo.carfagna@bloggs.com" target="_blank">enzo.carfagna@bloggs.com</a></li>
+				<li>site: <a href="http://www.bloggs.com">www.bloggs.com</a></li>
+				<li>téléphone: 0123456789</li>
 			</ul>
 		</div>
 		<div class="clear"></div>
@@ -145,6 +146,39 @@
 			</div>
 			<div class="clear"></div>
 		</section>
+		
+		<section>
+		<div class="container">  
+		<form id="contact" action="" method="post">
+		    <h3>Formulaire de contact</h3>
+		    <h4>N'hésitez pas à me contacter !</h4>
+		    <fieldset>
+		      <input placeholder="Nom" type="text" tabindex="1" required autofocus>
+		    </fieldset>
+		    <fieldset>
+		      <input placeholder="Adresse mail" type="email" tabindex="2" required>
+		    </fieldset>
+		    <fieldset>
+		      <input placeholder="Numéro de téléphone" type="tel" tabindex="3" required>
+		    </fieldset>
+		    <fieldset>
+		      <input placeholder="Site Internet avec http://" type="url" tabindex="4" required>
+		    </fieldset>
+		    <fieldset>
+		      <textarea placeholder="Entrez votre message ici..." tabindex="5" required></textarea>
+		    </fieldset>
+		    <fieldset>
+		      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Envoyez</button>
+		    </fieldset>
+		</form>
+		</section>
+ 
+  
+</div>
+		
+		
+		
+		
 		
 	</div>
 </div>
