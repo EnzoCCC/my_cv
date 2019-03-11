@@ -74,4 +74,10 @@ class LuckyController extends AbstractController
         
         return $this->redirectToRoute('app_lucky_number');
     }
+    
+    public function admin()
+    {
+        return $this->redirectToRoute('app_lucky_number');
+    }
+    
 }
