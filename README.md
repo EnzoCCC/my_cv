@@ -1,5 +1,6 @@
 # my_cv
 # Fonctionnalités
+## Connection au CV
 ## Gestion des informations dans une base de donnée
 Toutes les informations présentent sur le CV son stockées dans une base de donnée. Cette dernière peut être administrée via phpmyadmin.
 
